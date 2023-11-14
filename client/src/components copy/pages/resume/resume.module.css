@@ -1,0 +1,17 @@
+.container {
+    background-color: rgb(55, 0, 255);
+    font-size: larger;
+    color: blue;
+    width: 80vw;
+    flex-wrap: nowrap;
+    align-self: center;
+    /* margin-top: 8rem; */
+}
+
+.header {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    margin-top: 8rem;
+}

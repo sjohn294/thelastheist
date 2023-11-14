@@ -1,0 +1,48 @@
+.container {
+    background: #bbbbbb;
+    margin-top: 8rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 80%;
+  
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-self: center;
+}
+
+.name {
+    font-size: 4rem;
+    font-family: 'Audiowide', sans-serif;
+    color: rgb(15, 71, 121);
+    font-weight: 800;
+    text-shadow: 8px 8px 15px rgb(232, 232, 233), 3px 3px 5px rgb(15, 71, 247);
+    margin-bottom: 2rem;
+
+}
+
+
+.title {
+    font-size: 1.5rem;
+    font-family: 'Tektur', sans-serif;
+    color: rgb(333);
+    font-weight: 800;
+    text-shadow: 8px 8px 10px rgb(232, 232, 233);
+    margin-bottom: 2rem;
+}
+
+.image>img {
+    height: 40rem;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+    /* background-image: url(../../../assets/Profile.jpg); */
+    z-index: 10;
+}

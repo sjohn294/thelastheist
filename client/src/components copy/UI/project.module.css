@@ -1,0 +1,52 @@
+.card {
+background-color: #999;
+margin: .5rem;
+height: 35rem;
+border-radius: .2rem;
+}
+
+.header{
+margin: .5rem;
+}
+
+.images>img{
+height: 28rem;
+object-fit: cover;
+object-position: center;
+}
+
+.about{
+background: #666;
+}
+
+.gitHubBtn{
+    margin: .25rem;
+    border-radius: .5em;
+    background: #666;
+    padding: .35em;
+    color: #eedede;
+    font-family: 'Tektur', sans-serif;
+
+}
+
+
+
+.gitHubBtn:hover {
+    color: white;
+    background: #333;
+}
+
+.deployedBtn{
+    margin: .25rem;
+    border-radius: .5em;
+    background: #666;
+    padding: .35em;
+    color: #eedede;
+    font-family: 'Tektur', sans-serif;
+}
+
+
+.deployedBtn:hover {
+    color: white;
+    background: #333;
+}
