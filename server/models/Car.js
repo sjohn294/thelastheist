@@ -20,7 +20,7 @@ const carSchema = new Schema({
   passengerCount: {
     type: Number,
     required: true,
-    min: 
+    min: 1
   },
   transmission: {
     type: String,
