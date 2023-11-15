@@ -13,40 +13,5 @@
     "name": "Why The Lucky Stiff",
     "email": "wtls@techfriends.dev",
     "password": "password03"
-  },
-  {
-    "name": "Kent Beck",
-    "email": "kbeck@techfriends.dev",
-    "password": "password04"
-  },
-  {
-    "name": "Edward V. Berard",
-    "email": "evberard@techfriends.dev",
-    "password": "password05"
-  },
-  {
-    "name": "Alan Kay",
-    "email": "akay@techfriends.dev",
-    "password": "password06"
-  },
-  {
-    "name": "C.A.R. Hoare",
-    "email": "choare@techfriends.dev",
-    "password": "password07"
-  },
-  {
-    "name": "David Thomas",
-    "email": "dthomas@techfriends.dev",
-    "password": "password08"
-  },
-  {
-    "name": "Donald Knuth",
-    "email": "dknuth@techfriends.dev",
-    "password": "password09"
-  },
-  {
-    "name": "Lernantino",
-    "email": "lernantino@techfriends.dev",
-    "password": "password10"
-  }
-]
+
+    
