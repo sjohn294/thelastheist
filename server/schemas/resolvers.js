@@ -1,125 +1,97 @@
-const { User, Car } = require('../models');
+const { User, Vehicle, } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    // Fetch all users
     users: async () => {
-      return User.find().populate('thoughts');
+      return User.find();
     },
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('thoughts');
+    // Fetch a single user by name
+    user: async (parent, { name }) => {
+      return User.findOne({ name });
     },
-    thoughts: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Thought.find(params).sort({ createdAt: -1 });
+    // Fetch all vehicles
+    vehicles: async () => {
+      return Vehicle.find().sort({ createdAt: -1 });
     },
-    thought: async (parent, { thoughtId }) => {
-      return Thought.findOne({ _id: thoughtId });
+    // Fetch a single vehicle by ID
+    vehicle: async (parent, { vehicleId }) => {
+      return Vehicle.findOne({ _id: vehicleId });
     },
-
+    // Fetch the current authenticated user
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('thoughts');
+        return User.findOne({ _id: context.user._id });
       }
-      throw AuthenticationError;
-    },
+      throw new AuthenticationError('Not Authenticated');
+    }
   },
 
   Mutation: {
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
+    // Create a new user
+    addUser: async (parent, { name, email, password }) => {
+      const user = await User.create({ name, email, password });
       const token = signToken(user);
       return { token, user };
     },
+    // Authenticate a user
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw AuthenticationError;
+        throw new AuthenticationError('No user found with this email address');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw AuthenticationError;
+        throw new AuthenticationError('Incorrect password');
       }
 
       const token = signToken(user);
-
       return { token, user };
     },
-
-    addThought: async (parent, { thoughtText }, context) => {
+    // Add a new vehicle
+    addVehicle: async (parent, { vehicleData }, context) => {
       if (context.user) {
-        const thought = await Thought.create({
-          thoughtText,
-          thoughtAuthor: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { thoughts: thought._id } }
-        );
-
-        return thought;
+        const vehicle = await Vehicle.create(vehicleData);
+        return vehicle;
       }
-      throw AuthenticationError;
-      ('You need to be logged in!');
+      throw new AuthenticationError('You need to be logged in!');
     },
-
-    addComment: async (parent, { thoughtId, commentText }, context) => {
+    // Update a vehicle
+    updateVehicle: async (parent, { vehicleId, vehicleData }, context) => {
       if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
-          {
-            $addToSet: {
-              comments: { commentText, commentAuthor: context.user.username },
-            },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
+        const updatedVehicle = await Vehicle.findOneAndUpdate(
+          { _id: vehicleId },
+          { ...vehicleData },
+          { new: true, runValidators: true }
         );
+
+        if (!updatedVehicle) {
+          throw new Error('Vehicle not found');
+        }
+
+        return updatedVehicle;
       }
-      throw AuthenticationError;
+      throw new AuthenticationError('You need to be logged in!');
     },
-
-    removeThought: async (parent, { thoughtId }, context) => {
+    // Delete a vehicle
+    deleteVehicle: async (parent, { vehicleId }, context) => {
       if (context.user) {
-        const thought = await Thought.findOneAndDelete({
-          _id: thoughtId,
-          thoughtAuthor: context.user.username,
-        });
+        const vehicleToDelete = await Vehicle.findOneAndDelete({ _id: vehicleId });
 
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { thoughts: thought._id } }
-        );
+        if (!vehicleToDelete) {
+          throw new Error('Vehicle not found');
+        }
 
-        return thought;
+        return vehicleToDelete;
       }
-      throw AuthenticationError;
-    },
-    
-    removeComment: async (parent, { thoughtId, commentId }, context) => {
-      if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
-          {
-            $pull: {
-              comments: {
-                _id: commentId,
-                commentAuthor: context.user.username,
-              },
-            },
-          },
-          { new: true }
-        );
-      }
-      throw AuthenticationError;
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
+  
 };
 
 module.exports = resolvers;
