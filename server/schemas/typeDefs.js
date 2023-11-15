@@ -1,20 +1,25 @@
 const typeDefs = `
   type User {
     _id: ID
-    username: String
+    name: String
     email: String
     password: String
-    thoughts: [Thought]!
+    cars: [Car]!
   }
 
-  type Thought {
-    _id: ID
-    thoughtText: String
-    thoughtAuthor: String
-    createdAt: String
+  type Car {
+    id: ID!
+    make: String!
+    model: String!
+    doors: Int!
+    passengerCount: Int!
+    transmission: TransmissionType!
+    fuelType: FuelType!
+    mpg: Float!
+    isPetFriendly: Boolean!
+    createdAt: String!
     comments: [Comment]!
   }
-
   type Comment {
     _id: ID
     commentText: String
@@ -27,21 +32,45 @@ const typeDefs = `
     user: User
   }
 
+  
+
   type Query {
     users: [User]
     user(username: String!): User
-    thoughts(username: String): [Thought]
-    thought(thoughtId: ID!): Thought
+    cars: [Car]
+    car(id: ID!): Car
     me: User
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addThought(thoughtText: String!): Thought
-    addComment(thoughtId: ID!, commentText: String!): Thought
-    removeThought(thoughtId: ID!): Thought
-    removeComment(thoughtId: ID!, commentId: ID!): Thought
+    addCar(input: CreateCarInput!): Car
+    updateCar(input: UpdateCarInput!): Car
+    deleteCar(id: ID!): Car
+  }
+
+  input CreateCarInput {
+    make: String!
+    model: String!
+    doors: Int!
+    passengerCount: Int!
+    transmission: TransmissionType!
+    fuelType: FuelType!
+    mpg: Float!
+    isPetFriendly: Boolean!
+  }
+
+  input UpdateCarInput {
+    id: ID!
+    make: String
+    model: String
+    doors: Int
+    passengerCount: Int
+    transmission: TransmissionType
+    fuelType: FuelType
+    mpg: Float
+    isPetFriendly: Boolean
   }
 `;
 
