@@ -4,10 +4,10 @@ const typeDefs = `
     name: String
     email: String
     password: String
-    cars: [Car]!
+    
   }
 
-  type Car {
+  type Vehicle {
     id: ID!
     make: String!
     model: String!
@@ -36,9 +36,7 @@ const typeDefs = `
 
   type Query {
     users: [User]
-    user(username: String!): User
-    cars: [Car]
-    car(id: ID!): Car
+    user(name: String!): User
     me: User
   }
 

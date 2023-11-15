@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const carSchema = new Schema({
+const vehicleSchema = new Schema({
   make: {
     type: String,
     required: true,
@@ -20,7 +20,7 @@ const carSchema = new Schema({
   passengerCount: {
     type: Number,
     required: true,
-    min: 
+    min: 1
   },
   transmission: {
     type: String,
@@ -69,6 +69,6 @@ const carSchema = new Schema({
   ]
 });
 
-const Car = model('Car', carSchema);
+const Vehicle = model('Vehicle', vehicleSchema);
 
-module.exports = Car;
+module.exports = Vehicle;
