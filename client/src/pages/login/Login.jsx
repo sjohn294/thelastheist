@@ -1,5 +1,7 @@
+import LoginCSS from './login.module.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 
@@ -41,11 +43,11 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className= {LoginCSS.container}>
       <div className="col-12 col-lg-10">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
+          <div className= {LoginCSS.body}>
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -54,7 +56,7 @@ const Login = (props) => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className= {LoginCSS.input}
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -62,7 +64,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className= {LoginCSS.input}
                   placeholder="******"
                   name="password"
                   type="password"

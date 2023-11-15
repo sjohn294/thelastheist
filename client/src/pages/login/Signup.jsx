@@ -1,10 +1,11 @@
+import SignupCSS from './signup.module.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
+import { ADD_USER } from '../../utils/mutations';
 
-import Auth from '../utils/auth';
+import Auth from '../../utils/auth';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -39,11 +40,11 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className= {SignupCSS.container}>
       <div className="col-12 col-lg-10">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+          <div className= {SignupCSS.body}>
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -52,7 +53,7 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className= {SignupCSS.input}
                   placeholder="Your username"
                   name="username"
                   type="text"
@@ -60,7 +61,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className= {SignupCSS.input}
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -68,7 +69,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className= {SignupCSS.input}
                   placeholder="******"
                   name="password"
                   type="password"
