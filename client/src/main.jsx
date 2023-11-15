@@ -7,9 +7,9 @@ import './components/style/index.css'
 import App from './App.jsx';
 import Error from './components/pages/error/Error.jsx';
 import Home from './components/pages/home/Home.jsx';
-import Contact from './components/pages/contact/Contact.jsx';
-import About from './components/pages/about/About.jsx';
-import Portfolio from './components/pages/portfolio/Portfolio.jsx';
+import Login from './components/pages/login/Login.jsx';
+import Schedule from './components/pages/schedule/Schedule.jsx';
+import Vehicles from './components/pages/vehicles/Vehicles.jsx';
 import Resume from './components/pages/resume/Resume.jsx';
 
 
@@ -31,16 +31,16 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/Portfolio',
-        element: <Portfolio />,
+        path: '/Login',
+        element: <Login />,
       },
       {
-        path: '/Contact',
-        element: <Contact />,
+        path: '/Schedule',
+        element: <Schedule />,
       },
       {
-        path: '/Resume',
-        element: <Resume />,
+        path: '/Vehicles',
+        element: <Vehicles />,
       },
     ],
   },
