@@ -26,9 +26,9 @@ const Home = () => {
     <main >
       <nav className="navbar">
       <ul>
-        <li><a href="/reservation" className="navbar-link">Reservation</a></li>
+        {/* <li><a href="/reservation" className="navbar-link">Reservation</a></li>
         <li><a href="/vehicles" className="navbar-link">Vehicles</a></li>
-        <li><a href="/region" className="navbar-link">Region</a></li>
+        <li><a href="/region" className="navbar-link">Region</a></li> */}
       </ul>
       </nav>
 
