@@ -17,7 +17,7 @@ const resolvers = {
     },
     // Fetch a single vehicle by ID
     vehicle: async (parent, { vehicleId }) => {
-      return Vehicle.findOne({ _id: vehicleId });
+      return Vehicle.findOne({ _id: id });
     },
     // Fetch the current authenticated user
     me: async (parent, args, context) => {
@@ -61,35 +61,35 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     // Update a vehicle
-    updateVehicle: async (parent, { vehicleId, vehicleData }, context) => {
-      if (context.user) {
-        const updatedVehicle = await Vehicle.findOneAndUpdate(
-          { _id: vehicleId },
-          { ...vehicleData },
-          { new: true, runValidators: true }
-        );
+    // updateVehicle: async (parent, { vehicleId, vehicleData }, context) => {
+    //   if (context.user) {
+    //     const updatedVehicle = await Vehicle.findOneAndUpdate(
+    //       { _id: vehicleId },
+    //       { ...vehicleData },
+    //       { new: true, runValidators: true }
+    //     );
 
-        if (!updatedVehicle) {
-          throw new Error('Vehicle not found');
-        }
+    //     if (!updatedVehicle) {
+    //       throw new Error('Vehicle not found');
+    //     }
 
-        return updatedVehicle;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    // Delete a vehicle
-    deleteVehicle: async (parent, { vehicleId }, context) => {
-      if (context.user) {
-        const vehicleToDelete = await Vehicle.findOneAndDelete({ _id: vehicleId });
+    //     return updatedVehicle;
+    //   }
+    //   throw new AuthenticationError('You need to be logged in!');
+    // },
+    // // Delete a vehicle
+    // deleteVehicle: async (parent, { vehicleId }, context) => {
+    //   if (context.user) {
+    //     const vehicleToDelete = await Vehicle.findOneAndDelete({ _id: vehicleId });
 
-        if (!vehicleToDelete) {
-          throw new Error('Vehicle not found');
-        }
+    //     if (!vehicleToDelete) {
+    //       throw new Error('Vehicle not found');
+    //     }
 
-        return vehicleToDelete;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
+    //     return vehicleToDelete;
+    //   }
+    //   throw new AuthenticationError('You need to be logged in!');
+    // },
   },
   
 };

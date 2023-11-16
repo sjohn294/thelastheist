@@ -8,21 +8,21 @@ const typeDefs = `
   }
 
   type Vehicle {
-    id: ID!
-    make: String!
-    model: String!
+    id: ID
+    make: String
+    model: String
     size: String
     type: String
-    doors: Int!
-    fuel_type: String!
+    doors: Int
+    fuel_type: String
     mpg: Int
     range: Int
-    passenger_capacity: Int!
-    transmission: TransmissionType!
+    passenger_capacity: Int
+    transmission: String
       }
 
    type Auth {
-    token: ID!
+    token: ID
     user: User
   }
 
@@ -32,11 +32,18 @@ const typeDefs = `
     users: [User]
     user(name: String!): User
     me: User
+    vehicle: Vehicle
+    vehicles: [Vehicle]
+
   }
+
+
+
 
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addVehicle( id: ID, make: String, model: String, size: String, type: String, doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): Boolean
     
   }
 
