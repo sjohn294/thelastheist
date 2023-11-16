@@ -1,7 +1,10 @@
 import { useQuery } from '@apollo/client';
 import React from 'react';
-import cars from '../../vehicleSeeds';
+// import cars from '../../vehicleSeeds';
 import styles from './home.module.css'; 
+
+// placeholder for carcard
+import CarCard from '../vehicles/cards/Card.jsx'
 
 
 const cars = [
@@ -15,15 +18,17 @@ const cars = [
   { name: 'Minivan', type: 'Minivan' },
   { name: 'Van', type: 'Van'},
 ]
+
+
 const Home = () => {
   return (
 
-    <main>
-      <nav class="navbar">
+    <main >
+      <nav className="navbar">
       <ul>
-        <li><a href="/reservation" class="navbar-link">Reservation</a></li>
-        <li><a href="/vehicles" class="navbar-link">Vehicles</a></li>
-        <li><a href="/region" class="navbar-link">Region</a></li>
+        <li><a href="/reservation" className="navbar-link">Reservation</a></li>
+        <li><a href="/vehicles" className="navbar-link">Vehicles</a></li>
+        <li><a href="/region" className="navbar-link">Region</a></li>
       </ul>
       </nav>
 
