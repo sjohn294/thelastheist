@@ -18,7 +18,6 @@ function NavTabs() {
             </div>
             <ul className={NavTabsCSS.nav} >
 
-
                 <li className={NavTabsCSS.logo}>
                     <Link
                         to="/Login"
@@ -36,6 +35,25 @@ function NavTabs() {
                         Signup
                     </Link>
                 </li>
+
+                <li className={NavTabsCSS.logo}>
+                    <Link
+                        to="/Vehicles"
+                        className={currentPage === '/Vehicles' ? 'nav-link active' : 'nav-link'}
+                    >
+                        Vehicles
+                    </Link>
+                </li>
+
+                <li className={NavTabsCSS.logo}>
+                    <Link
+                        to="/Region"
+                        className={currentPage === '/Region' ? 'nav-link active' : 'nav-link'}
+                    >
+                        Region
+                    </Link>
+                </li>
+
             </ul>
         </div>
     );
