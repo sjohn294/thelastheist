@@ -1,16 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/style/index.css'
+import './style/index.css'
 
 
 import App from './App.jsx';
-import Error from './components/pages/error/Error.jsx';
-import Home from './components/pages/home/Home.jsx';
-import Login from './components/pages/login/Login.jsx';
-import Schedule from './components/pages/schedule/Schedule.jsx';
-import Vehicles from './components/pages/vehicles/Vehicles.jsx';
-import Resume from './components/pages/resume/Resume.jsx';
+import Error from './pages/error/ErrorPage.jsx';
+import Home from './pages/home/Home.jsx';
+import Login from './pages/login/Login.jsx';
+import Schedule from './pages/schedule/Schedule.jsx';
+import Vehicle from './pages/vehicles/Vehicle.jsx';
+
 
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -26,10 +25,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      {
-        path: '/About',
-        element: <About />,
-      },
+   
       {
         path: '/Login',
         element: <Login />,
@@ -40,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/Vehicles',
-        element: <Vehicles />,
+        element: <Vehicle />,
       },
     ],
   },
