@@ -1,7 +1,7 @@
-import { useQuery } from '@apollo/client';
+// import { useQuery } from '@apollo/client';
 import React from 'react';
 // import cars from '../../vehicleSeeds';
-import styles from './home.module.css'; 
+import './home.module.css'; 
 
 // placeholder for carcard
 // import CarCard from '../vehicles/cards/Card.jsx'
