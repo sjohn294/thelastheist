@@ -1,7 +1,5 @@
 .main {
-    background-color: aqua;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    /* height: 90vh; */
+
+    height: 90vh;
 }

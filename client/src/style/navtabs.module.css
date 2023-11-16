@@ -1,5 +1,9 @@
 .container {
     background-color: purple;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    align-content: center;
+    justify-content: center;
 
 }
 
@@ -59,20 +63,14 @@
 
 .nav {
     display: flex;
-    justify-content: center;
+
     color: rgb(15, 71, 121);
-    width: 100vw;
     padding: 2rem;
-    flex-wrap: nowrap;
-    align-items: center;
     height: 3rem;
     font-size: 2rem;
-
-
 }
 
 .logo {
-
     list-style: none;
     padding-left: .5rem;
     padding-right: .5rem;
@@ -80,10 +78,7 @@
     margin-right: 1%;
     background-color: white;
     color: rgb(15, 71, 121);
-    align-content: center;
-    align-items: center;
     border-radius: 16px;
-
 }
 
 .nav:hover {
