@@ -13,7 +13,7 @@ function NavTabs() {
                     to="/"
                     className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
                 >
-                    <p className={NavTabsCSS.logo}>Will Speakman</p>
+                    <p className={NavTabsCSS.logo}>Home</p>
                 </Link>
             </div>
             <ul className={NavTabsCSS.nav} >
@@ -21,37 +21,21 @@ function NavTabs() {
 
                 <li className={NavTabsCSS.logo}>
                     <Link
-                        to="/About"
-                        className={currentPage === '/About' ? 'nav-link  active' : 'nav-link'}
+                        to="/Login"
+                        className={currentPage === '/Login' ? 'nav-link  active' : 'nav-link'}
                     >
-                        About
+                        Login
                     </Link>
                 </li>
 
                 <li className={NavTabsCSS.logo}>
                     <Link
-                        to="/Portfolio"
-                        className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
+                        to="/Signup"
+                        className={currentPage === '/Signup' ? 'nav-link active' : 'nav-link'}
                     >
-                        Portfolio
+                        Signup
                     </Link>
                 </li>
-
-                <li className={NavTabsCSS.logo}>
-                    <Link
-                        to="/Contact"
-                        className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
-                    >
-                        Contact
-                    </Link>
-                </li>
-
-
-                <li className={NavTabsCSS.logo} type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Resume
-                </li>
-
-
             </ul>
         </div>
     );

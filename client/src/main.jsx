@@ -7,7 +7,7 @@ import App from './App.jsx';
 import Error from './pages/error/ErrorPage.jsx';
 import Home from './pages/home/Home.jsx';
 import Login from './pages/login/Login.jsx';
-import Schedule from './pages/schedule/Schedule.jsx';
+// import Schedule from './pages/schedule/Schedule.jsx';
 import Vehicle from './pages/vehicles/Vehicle.jsx';
 
 
@@ -29,10 +29,10 @@ const router = createBrowserRouter([
         path: '/Login',
         element: <Login />,
       },
-      {
-        path: '/Schedule',
-        element: <Schedule />,
-      },
+      // {
+      //   path: '/Schedule',
+      //   element: <Schedule />,
+      // },
       {
         path: '/Vehicles',
         element: <Vehicle />,
