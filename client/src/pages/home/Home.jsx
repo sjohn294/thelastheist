@@ -1,11 +1,10 @@
 // import { useQuery } from '@apollo/client';
 import React from 'react';
-// import cars from '../../vehicleSeeds';
+// import cars from '../../../../server/seeders/vehicleSeeds.json';
 import './home.module.css'; 
 
 // placeholder for carcard
-// import CarCard from '../vehicles/cards/Card.jsx'
-
+// import CarCard from '../../../../server/seeders/carDB'
 
 const cars = [
   { name: 'Sedan', type: 'Sedan' },
@@ -22,7 +21,6 @@ const cars = [
 
 const Home = () => {
   return (
-
     <main >
       <nav className="navbar">
       <ul>
@@ -31,7 +29,6 @@ const Home = () => {
         <li><a href="/region" className="navbar-link">Region</a></li> */}
       </ul>
       </nav>
-
       <div className="flex-row justify-center">
           <div
           className="col-12 col-md-10 mb-3 p-3"

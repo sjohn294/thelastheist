@@ -7,8 +7,10 @@ import App from './App.jsx';
 import Error from './pages/error/ErrorPage.jsx';
 import Home from './pages/home/Home.jsx';
 import Login from './pages/login/Login.jsx';
+import Signup from './pages/login/Signup.jsx';
 // import Schedule from './pages/schedule/Schedule.jsx';
 import Vehicle from './pages/vehicles/Vehicle.jsx';
+// import Region from './pages/region/Region.jsx';
 
 
 
@@ -21,21 +23,29 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
-      // {
-      //   index: true,
-      //   element: <Home />,
-      // },
-      // {
-      //   path: '/Login',
-      //   element: <Login />,
-      // },
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: '/Login',
+        element: <Login />,
+      },
       // {
       //   path: '/Schedule',
       //   element: <Schedule />,
       // },
+      {
+        path: '/Signup',
+        element: <Signup />,
+      },
+      {
+        path: '/Vehicles',
+        element: <Vehicle />,
+      },
       // {
-      //   path: '/Vehicles',
-      //   element: <Vehicle />,
+      //   path: '/Region',
+      //   element: <Region />,
       // },
     ],
   },
