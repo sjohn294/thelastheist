@@ -8,15 +8,15 @@ function NavTabs() {
 
     return (
         <div className={NavTabsCSS.container}>
-            <div className={NavTabsCSS.logo}>
-                <Link
-                    to="/"
-                    className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
-                >
-                    <p className={NavTabsCSS.logo}>Home</p>
-                </Link>
-            </div>
             <ul className={NavTabsCSS.nav} >
+                <li className={NavTabsCSS.logo}>
+                    <Link
+                        to="/"
+                        className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+                    >
+                        Home
+                    </Link>
+                </li>
 
                 <li className={NavTabsCSS.logo}>
                     <Link

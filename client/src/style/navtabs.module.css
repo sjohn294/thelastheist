@@ -1,5 +1,6 @@
 .container {
     background-color: purple;
+
 }
 
 /* .logo {
@@ -54,22 +55,37 @@
     position:fixed ;
     width: 100vw;
     top: 0;
-}
+} */
 
 .nav {
-    background: #888;
-    padding: .5rem;
-    padding-right: 1rem;
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    color: rgb(15, 71, 121);
+    width: 100vw;
+    padding: 2rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 3rem;
+    font-size: 2rem;
+
+
+}
+
+.logo {
+
     list-style: none;
-    margin-right: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: white;
     color: rgb(15, 71, 121);
     align-content: center;
     align-items: center;
+    border-radius: 16px;
 
 }
 
 .nav:hover {
     color: rgb(15, 71, 121);
-} */
+}
