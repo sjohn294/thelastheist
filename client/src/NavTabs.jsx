@@ -3,6 +3,7 @@ import NavTabsCSS from './style/navtabs.module.css'
 
 
 
+
 function NavTabs() {
     const currentPage = useLocation().pathname;
 
@@ -55,6 +56,7 @@ function NavTabs() {
                 </li>
 
             </ul>
+            
         </div>
     );
 }
