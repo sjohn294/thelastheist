@@ -1,10 +1,10 @@
 const typeDefs = `
+
   type User {
     _id: ID
     name: String
     email: String
     password: String
-    
   }
 
   type Vehicle {
@@ -21,6 +21,7 @@ const typeDefs = `
     transmission: String
       }
 
+
    type Auth {
     token: ID
     user: User
@@ -34,7 +35,6 @@ const typeDefs = `
     me: User
     vehicle: Vehicle
     vehicles: [Vehicle]
-
   }
 
 
@@ -44,7 +44,6 @@ const typeDefs = `
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addVehicle( id: ID, make: String, model: String, size: String, type: String, doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): Boolean
-    
   }
 
 `;
