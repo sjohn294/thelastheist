@@ -17,7 +17,7 @@ const resolvers = {
 
     // Fetch all vehicles
     vehicles: async () => {
-      return Vehicle.find().sort({ id: 1 });
+      return Vehicle.find().sort({ make: 1 });
     },
 
     // Fetch a single vehicle by ID

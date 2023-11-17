@@ -19,7 +19,7 @@ const typeDefs = `
     range: Int
     passenger_capacity: Int
     transmission: String
-      }
+  }
 
 
    type Auth {
@@ -32,7 +32,6 @@ const typeDefs = `
   type Query {
     users: [User]
     user(name: String!): User
-    me: User
     vehicle: Vehicle
     vehicles: [Vehicle]
   }
@@ -44,6 +43,8 @@ const typeDefs = `
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addVehicle( id: ID, make: String, model: String, size: String, type: String, doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): Boolean
+    updateVehicle( id: ID, make: String, model: String, size: String, type: String, doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): Boolean
+    deleteVehicle( id: ID, make: String, model: String, size: String, type: String, doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): Boolean
   }
 
 `;
