@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import PagesCSS from '../pages/pages.css'
 
 
 
@@ -26,7 +26,7 @@ export default function VicTypes() {
         <div className= 'type-container'>
             {categories.map((type, index) => (
                  <Card key={index} className='card'>
-                 <Card.Img variant="top" src={type.image} />
+                 <Card.Img variant="top" className={PagesCSS.image} src={type.image} />
                  <Card.Body>
                      <Card.Title>{type.title}</Card.Title>
                      
