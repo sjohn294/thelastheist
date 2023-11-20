@@ -3,6 +3,7 @@ import SearchBar from '../SearchBar';
 import Regions from '../Regions';
 
 
+
 const Home = () => {
   return (
     <div className="container">

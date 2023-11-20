@@ -9,6 +9,8 @@ import Card from 'react-bootstrap/Card';
 
 
 
+
+
 export default function VicTypes() {
     const categories =[
         {title: '', image:'', dataLink:''},
