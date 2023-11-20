@@ -1,20 +1,13 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/index.css'
-
-
-import App from './App.jsx';
-import Error from './pages/error/ErrorPage.jsx';
-import Home from './pages/home/Home.jsx';
-import Login from './pages/login/Login.jsx';
-import Signup from './pages/login/Signup.jsx';
-// import Schedule from './pages/schedule/Schedule.jsx';
-import Vehicle from './pages/vehicles/Vehicle.jsx';
-// import Region from './pages/region/Region.jsx';
-
-
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App.jsx';
+import Home from './components/pages/Home.jsx';
+import Login from './components/pages/Login.jsx';
+import Signup from './components/pages/Signup.jsx';
+
 
 
 const router = createBrowserRouter([
@@ -31,22 +24,15 @@ const router = createBrowserRouter([
         path: '/Login',
         element: <Login />,
       },
-      // {
-      //   path: '/Schedule',
-      //   element: <Schedule />,
-      // },
       {
         path: '/Signup',
         element: <Signup />,
       },
       {
-        path: '/Vehicles',
-        element: <Vehicle />,
+        path: '/VehicleList',
+        element: <Signup />,
       },
-      // {
-      //   path: '/Region',
-      //   element: <Region />,
-      // },
+
     ],
   },
 ]);
