@@ -1,4 +1,5 @@
-const { User, Vehicle, } = require('../models');
+const {User, Vehicle} = require('../models')
+
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -6,33 +7,75 @@ const resolvers = {
   Query: {
 
     // Fetch all users
-    users: async () => {
-      return User.find();
+    allUsers: async () => {
+      return await User.find({}).sort({ name: 1 }).populate('Vehicles').sort({ make: 1 }).sort({ model: 1 });
     },
 
     // Fetch a single user by name
-    user: async (parent, { name }) => {
-      return User.findOne({ name });
+    singleUser: async (parent, { arg }) => {
+      return User.findOne({arg}).populate('Vehicles').sort({ make: 1 }).sort({ model: 1 });
     },
 
     // Fetch all vehicles
-    vehicles: async () => {
-      return Vehicle.find().sort({ make: 1 });
+    allVehicles: async () => {
+      return await Vehicle.find().sort({ make: 1 }).sort({ model: 1 }).populate('users').sort({ name: 1 });
     },
 
-    // Fetch a single vehicle by ID
-    vehicle: async (parent, { vehicleId }) => {
-      return Vehicle.findOne({ _id: id });
+    singleVehicle: async (parent, { arg }) => {
+      return await Vehicle.find({arg}).populate('users').sort({ name: 1 });
     },
+
+    // // Fetch a single vehicle by make
+    // singleRegion: async (parent, { arg }) => {
+    //   return await Regions.findOne({ arg }).populate('users').sort({ name: 1 }).populate('Vehicles').sort({ make: 1 }).sort({ model: 1 });
+    // },
+
+    // // Fetch a single vehicle by model
+    // allRegions: async () => {
+    //   return await Regions.find().populate('users').populate('users').sort({ name: 1 }).populate('Vehicles').sort({ make: 1 }).sort({ model: 1 });
+    // },
+
+
+    // .populate([{path:'Regions', strictPopulate: false}]).sort({ location: 1 })
+
+    // // Fetch a single vehicle by size
+    // vehicleBySize: async (parent, { vehicleId }) => {
+    //   return await Vehicle.find({ size: id }).populate('users');
+    // },
+
+    //  // Fetch a single vehicle by type
+    //  vehicleByType: async (parent, { vehicleId }) => {
+    //   return await Vehicle.find({ type: id }).populate('users');
+    // },
+
+    // // Fetch a single vehicle by doors
+    // vehicleByDoors: async (parent, { vehicleId }) => {
+    //   return await Vehicle.find({ doors: id }).populate('users');
+    // },
+
+    //  // Fetch a single vehicle by fuel type
+    //  vehicleByFuel: async (parent, { vehicleId }) => {
+    //   return await Vehicle.find({ fuel_type: id }).populate('users');
+    // },
+
+    // // Fetch a single vehicle by mpg
+    // vehicleByMPG: async (parent, { vehicleId }) => {
+    //   return await Vehicle.find({ mpg: id }).populate('users');
+    // },
+
+    //  // Fetch a single vehicle by capacity
+    //  vehicleBycapacity: async (parent, { vehicleId }) => {
+    //   return await Vehicle.find({ mpg: id }).populate('users');
+    // },
 
     // Fetch the current authenticated user
-    me: async (parent, args, context) => {
-      if (context.user) {
-        return User.findOne({ _id: context.user._id });
-      }
+  //   me: async (parent, args, context) => {
+  //     if (context.user) {
+  //       return User.findOne({ _id: context.user._id });
+  //     }
 
-      throw new AuthenticationError('Not Authenticated');
-    }
+  //     throw new AuthenticationError('Not Authenticated');
+  //   }
 
   },
 

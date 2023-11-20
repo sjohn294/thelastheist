@@ -2,6 +2,11 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
+  id: {
+    type: Number,
+    required: true,
+    min: 1 
+  },
   name: {
     type: String,
     required: true,
@@ -19,6 +24,29 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  drivers_license: {
+    type: String,
+    minlength: 5,
+  },
+  drivers_ins: {
+    type: String,
+    minlength: 1,
+  },
+  address: {
+    type: String,
+    minlength: 5,
+  },
+
+  vehicles: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Vehicle'
+  }],
+  // {
+  //   toJSON: {
+  //     virtuals: true,
+  //   },
+  //   id: false,
+  // }
   
 });
 

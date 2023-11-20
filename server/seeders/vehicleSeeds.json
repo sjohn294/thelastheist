@@ -10,7 +10,8 @@
     "mpg": 32,
     "range": 450,
     "passenger_capacity": 5,
-    "transmission": "Automatic"
+    "transmission": "Automatic",
+    "location": "1"
   },
   {
     "id": 2,
