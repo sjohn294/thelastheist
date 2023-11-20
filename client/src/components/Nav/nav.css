@@ -1,0 +1,17 @@
+header {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    border: 2px solid blue;
+    margin: 2px;
+    padding: 3px;
+    font-size: x-large;
+}
