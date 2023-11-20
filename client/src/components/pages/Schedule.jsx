@@ -1,54 +1,85 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
-import moment from 'moment';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
-import Auth from '../../utils/auth';
+const Schedule = () => {
+    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [username, setUsername] = useState('');
+    const [fullName, setFullName] = useState('');
+    const [licenseNumber, setLicenseNumber] = useState('');
+    const [address, setAddress] = useState('');
+    const [insurance, setInsurance] = useState('');
+    const [vehicleId, setVehicleId] = useState('');
+    const [vehicleDetails, setVehicleDetails] = useState('');
+    const history = useHistory();
 
-const localizer = momentLocalizer(moment);
+    const handleDateChange = (date) => {
+        setSelectedDate(date);
+    };
 
-{Auth.loggedIn() ? (
-  <>
-   const Schedule = () => {
-  const isLoggedIn = Auth.loggedIn();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Username:', username);
+        console.log('Full Name:', fullName);
+        console.log('Driver\'s License Number:', licenseNumber);
+        console.log('Address:', address);
+        console.log('Insurance:', insurance);
+        console.log('Vehicle ID Number:', vehicleId);
+        console.log('Vehicle Details:', vehicleDetails);
+    };
 
-  if (!isLoggedIn) {
-    return <Redirect to="/login" />;
-  }
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            history.push('/login'); 
+        }
+    }, [history]);
 
-  const events = [
-    {
-      title: 'book vehicle',
-      start: new Date(),
-      end: new Date(),
-    },
-    
-  ];
-
-  return (
-    <div>
-      <Calendar
-        localizer={localizer}
-        events={events}
-        startAccessor="start"
-        endAccessor="end"
-        style={{ height: 500 }}
-      />
-    </div>
-  );
+    return (
+        <div>
+            <h1>Booking Calendar</h1>
+            <Calendar onChange={handleDateChange} value={selectedDate} />
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Username:
+                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+                </label>
+                <br />
+                <label>
+                    Full Name:
+                    <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} />
+                </label>
+                <br />
+                <label>
+                    Driver's License Number:
+                    <input type="text" value={licenseNumber} onChange={(e) => setLicenseNumber(e.target.value)} />
+                </label>
+                <br />
+                <label>
+                    Address:
+                    <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+                </label>
+                <br />
+                <label>
+                    Insurance:
+                    <input type="text" value={insurance} onChange={(e) => setInsurance(e.target.value)} />
+                </label>
+                <br />
+                <label>
+                    Vehicle ID Number:
+                    <input type="text" value={vehicleId} onChange={(e) => setVehicleId(e.target.value)} />
+                </label>
+                <br />
+                <label>
+                    Vehicle Details:
+                    <input type="text" value={vehicleDetails} onChange={(e) => setVehicleDetails(e.target.value)} />
+                </label>
+                <br />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    );
 };
-    <button className="btn btn-lg btn-light m-2" onClick={logout}>
-      Logout
-    </button>
-  </>
-) : (
-  <>
-    <Link className="btn btn-lg btn-info m-2" to="/login">
-      Login
-    </Link>
-    <Link className="btn btn-lg btn-light m-2" to="/signup">
-      Signup
-    </Link>
-  </>
-)}
+
+export default Schedule;
