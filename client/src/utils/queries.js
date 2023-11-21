@@ -26,22 +26,24 @@ export const QUERY_VEHICLES = gql`
   }
 `;
 
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        commentAuthor
-        createdAt
-      }
-    }
+export const QUERY_ALL_Vehicles = gql`
+query SingleVehicle {
+  allVehicles {
+    id
+    make
+    model
+    size
+    type
+    doors
+    fuel_type
+    mpg
+    range
+    passenger_capacity
+    transmission
   }
+}
 `;
+
 
 export const QUERY_ME = gql`
   query me {
