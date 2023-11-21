@@ -25,7 +25,7 @@ console.log(event)
 }
 
     return (
-      <ReactSearchBox
+      <ReactSearchBox id='SearchBarContainer'
         placeholder="Placeholder"
         value="Doe"
         // data={this.data}
