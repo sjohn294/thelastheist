@@ -10,6 +10,8 @@ import CoupeImage from '../../assets/car_images/33.jpg';
 import VanImage from '../../assets/car_images/70.jpg';
 import PagesCSS from '../pages/pages.css';
 
+
+
 export default function VicTypes() {
     const categories =[
         {title: 'Sedans', image:SedanImage, dataLink:''},
