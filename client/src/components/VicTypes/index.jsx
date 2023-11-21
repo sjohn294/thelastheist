@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -32,7 +33,7 @@ export default function VicTypes() {
                 <Card.Img variant="top" className="image card-image" src={type.image} />
                 <Card.Body>
                     <Card.Title>{type.title}</Card.Title>
-                    <Button as={Link} to={`/VehicleList/${type.title.toLowerCase()}`} variant="primary">See all</Button>
+                    <Button as={Link} to={`/VehicleList/${type.title}`} variant="primary">See all</Button>
                 </Card.Body>
             </Card>
             ))}

@@ -1,39 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { useQuery } from '@apollo/client';
+import { QUERY_BY_TYPE } from '../../utils/queries.js';
 import Button from 'react-bootstrap/Button';
 import { useParams } from 'react-router-dom';
 
 
 const VicList = () => {
   const { category } = useParams();
+  const { loading, error, data } = useQuery(QUERY_BY_TYPE, {
+    variables: { type: category },
+  });
 
-
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    fetch(`VehicleList/${category}`)
-      .then(response => response.json())
-      .then(data => setItems(data))
-      .catch(error => console.error('Error fetching data:', error));
-  }, [category]);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div className="list-container">
-      {items.length ? (
-        items.map((item, index) => (
+      {data && data.vehiclesByType.length ? (
+        data.vehiclesByType.map((item, index) => (
           <Card key={index} className='item-card'>
             <Card.Img variant="top" src={item.image} />
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
-              <Card.Text>
-                {item.description}
-              </Card.Text>
+              <Card.Text>{item.description}</Card.Text>
               <Button variant="primary" href={item.moreInfoLink}>Learn More</Button>
             </Card.Body>
           </Card>
         ))
       ) : (
-        <p>Loading...</p>
+        <p>No vehicles found for this category.</p>
       )}
     </div>
   );

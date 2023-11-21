@@ -60,3 +60,31 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_BY_TYPE = gql`
+query QueryByType($type: String!) {
+  vehiclesByType(type: $type) {
+    id
+    title
+    description
+    image
+    moreInfoLink
+    
+  }
+}
+`;
+
+export const QUERY_VEHICLES_BY_REGION = gql`
+  query QueryVehiclesByRegion($regionId: ID!) {
+    region(id: $regionId) {
+      id
+      name
+      vehicles {
+        id
+        title
+        description
+        image
+      }
+    }
+  }
+`;
