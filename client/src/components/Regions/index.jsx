@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Atlanta from '../../assets/images/atlicon.jpg';
@@ -12,7 +13,7 @@ import '../pages/pages.css';
 
 
 export default function Regions() {
-    const categories =[
+    const region =[
         {title: 'ATL', image: Atlanta , dataLink:''},
         {title: 'CLT', image: Charlotte, dataLink:''},
         {title: 'MIA', image: Miami, dataLink:''},
@@ -21,13 +22,15 @@ export default function Regions() {
 
     return (
         <div className= 'region-container'>
-            {categories.map((area, index) => (
+            {region.map((area, index) => (
+
                  <Card key={index} className='card'>
                  <Card.Img variant="region" src={area.image} />
+
                  <Card.Body>
                      <Card.Title>{area.title}</Card.Title>
                      
-                     <Button variant="primary" href={area.dataLink}>Show all rentals in region</Button>
+                     <Button as={Link} to={`/RegionList/${area.title.toUpperCase()}`}variant= "primary">Show all rentals in region</Button>
                  </Card.Body>
              </Card>
             ))}
