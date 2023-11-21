@@ -1,0 +1,12 @@
+[
+{
+    "id": 1,
+    "name": "Bob",
+    "email": "bob@email.com",
+    "password": "Bob123456",
+    "drivers_license":"DL123456789",
+    "drivers_ins": "Geico",
+    "address": "123 fake st."
+}
+
+]

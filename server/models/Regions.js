@@ -31,18 +31,3 @@ const regionSchema = new Schema({
 const Region = model('Region', regionSchema);
 
 module.exports = Region;
-
-// type Region {
-//   id: ID
-//   location: String
-//   users: [User]
-//   vehicles: [Vehicle]
-// }
-
-// region:[Region]
-
-// singleRegion(id:ID, location:String!): Region
-
-// allRegions: [Region]
-
-// .populate('Regions').sort({ location: 1 })

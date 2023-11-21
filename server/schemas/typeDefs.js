@@ -26,7 +26,7 @@ const typeDefs = `
     passenger_capacity: Int
     transmission: String
     users:[User]
-    
+    region:[Region]
   }
 
 
@@ -36,7 +36,13 @@ const typeDefs = `
     user: User
   }
 
-
+  type Region {
+      id: ID
+      location: String
+      users: [User]
+      vehicles: [Vehicle]
+    }
+    
   
 
   type Query {
@@ -49,6 +55,9 @@ const typeDefs = `
 
     singleVehicle( id: ID, make: String, model: String, size: String, type: String,    doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): Vehicle
     
+    singleRegion(id:ID, location:String!): Region
+
+    allRegions: [Region]
   
   }
 
