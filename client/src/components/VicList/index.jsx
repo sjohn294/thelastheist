@@ -1,4 +1,3 @@
-// VicList.js
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -12,7 +11,7 @@ const VicList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch(`your-api-endpoint/${category}`)
+    fetch(`VehicleList/${category}`)
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching data:', error));
