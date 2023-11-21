@@ -4,8 +4,11 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useParams } from 'react-router-dom';
 
+
 const VicList = () => {
   const { category } = useParams();
+
+
   const [items, setItems] = useState([]);
 
   useEffect(() => {

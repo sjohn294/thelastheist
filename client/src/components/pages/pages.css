@@ -1,12 +1,17 @@
-.vic-container {
+#searchBar{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  margin: .25rem 1rem;
+  border-bottom: 1px solid black;
+}
+
+#vic-container {
   display: flex;
   /* background: #888; */
   justify-content: center;
   align-content: center;
-
-
 }
-
 
 .about-cont {
   display: flex;
@@ -20,11 +25,13 @@
 }
 
 .card-victypes {
-  width: 50rem;
+  /* width: 50rem; */
   margin: 1em;
   flex-wrap: nowrap;
   align-self: center;
   justify-self: center;
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 20px;
 }
 
 /* 
@@ -40,9 +47,27 @@
   justify-self: center;
   /* height: 400px; */
   width: 40rem;
+  box-shadow: 0 0 5px black;
   /* width: 100px; */
   /* 80px 40px;
   background-position-y: center; */
+}
+
+.card-body {
+  margin-left: 30px;
+}
+
+.card-title {
+  font-size: 30px;
+  display: block;
+  /* text-align: center; */
+}
+
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  background-color: rgba(128, 128, 128, 0.4);
 }
 
 .card-container {
@@ -67,5 +92,12 @@
   align-content: center;
   gap: 2rem;
 }
+.card-img-region {
+  width: 200px;
+}
 
+#region-container {
+  display: flex;
+  flex-direction: row;
+}
 
