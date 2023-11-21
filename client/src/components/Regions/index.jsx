@@ -22,8 +22,10 @@ export default function Regions() {
     return (
         <div className= 'region-container'>
             {categories.map((area, index) => (
+
                  <Card key={index} className='card'>
                  <Card.Img variant="region" src={area.image} />
+
                  <Card.Body>
                      <Card.Title>{area.title}</Card.Title>
                      

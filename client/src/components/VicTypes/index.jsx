@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import SedanImage from '../../assets/car_images/1.png';
@@ -31,7 +33,7 @@ export default function VicTypes() {
                 <Card.Img variant="top" className="image card-image" src={type.image} />
                 <Card.Body>
                     <Card.Title>{type.title}</Card.Title>
-                    <Button variant="primary" href={type.dataLink}>See all</Button>
+                    <Button as={Link} to={`/VehicleList/${type.title.toLowerCase()}`} variant="primary">See all</Button>
                 </Card.Body>
             </Card>
             ))}

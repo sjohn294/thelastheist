@@ -1,15 +1,17 @@
+// VicList.js
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { useParams } from 'react-router-dom';
 
 
+const VicList = () => {
+  const { category } = useParams();
 
-const VicList = ({ category }) => {
+
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // Fetch data based on the category
-    // This is a placeholder for your data fetching logic
     fetch(`your-api-endpoint/${category}`)
       .then(response => response.json())
       .then(data => setItems(data))

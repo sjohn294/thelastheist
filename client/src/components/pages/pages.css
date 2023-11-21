@@ -92,7 +92,6 @@
   align-content: center;
   gap: 2rem;
 }
-
 .card-img-region {
   width: 200px;
 }
@@ -101,3 +100,4 @@
   display: flex;
   flex-direction: row;
 }
+
