@@ -1,6 +1,6 @@
 const {User, Vehicle, Regions} = require('../models')
 const { signToken, AuthenticationError } = require('../utils/auth');
-
+//const stripe = require('stripe')('sk_test_51OCoF4JlYTFEIr9i5IansO41n5udQ4SerVfjO4WrbgGzHbNmsTRafQ7oqAVYybpPoI1OwAIchvk9AyINRl2UgQwZ00H0PVKjUz');
 
 const resolvers = {
 
@@ -39,6 +39,39 @@ const resolvers = {
     allRegions: async () => {
       return await Regions.find().populate('users').populate('users').sort({ name: 1 }).populate('Vehicles').sort({ make: 1 }).sort({ model: 1 });
     },
+
+
+
+   
+checkout: async (parent, { vehicleId }, context) => {
+  if (context.user) {
+    const vehicle = await Vehicle.findById(vehicleId);
+    if (!vehicle) {
+      throw new Error('Vehicle not found');
+    }
+    const stripeSession = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [
+        {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: vehicle.make + ' ' + vehicle.model,
+              images: [vehicle.image],
+            },
+            unit_amount: vehicle.price * 100,  //dollar amount needs to be set for each vehicle class
+          },
+          quantity: 1,
+        },
+      ],
+      mode: 'payment'
+    });
+    return { sessionId: stripeSession.id };
+  }
+  throw new AuthenticationError('You need to be logged in!');
+
+
+
 
 
   //      // Fetch the current authenticated user
@@ -124,7 +157,7 @@ const resolvers = {
     // },
 
   },
-  
+  }
 };
 
 module.exports = resolvers;
