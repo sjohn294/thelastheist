@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -30,10 +31,12 @@ export default function VicTypes() {
             {categories.map((type, index) => (
                 <Card key={index} className=' card-victypes' as={Link} to={`/VehicleList/${type.title.toLowerCase()}`}>
                 <Card.Img variant="top" className="image card-image" src={type.image} />
-               
-                    <Card.Title className='card-title'>{type.title}</Card.Title>
-                    <Button as={Link} to={`/VehicleList/${type.title.toLowerCase()}`} variant="primary"></Button>
-               
+
+                <Card.Body>
+                    <Card.Title>{type.title}</Card.Title>
+                    <Button as={Link} to={`/VehicleList/${type.title}`} variant="primary">See all</Button>
+                </Card.Body>
+
             </Card>
             ))}
         </div>
