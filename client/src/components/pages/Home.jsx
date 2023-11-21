@@ -12,9 +12,10 @@ const Home = () => {
       </div>
       <div id='vic-container'>
         <VicTypes />
-      </div>
+      </div> 
+      <div id='region-container'>
       <Regions />
-
+      </div>
     </div>
   );
 };

@@ -96,3 +96,8 @@
 .card-img-region {
   width: 200px;
 }
+
+#region-container {
+  display: flex;
+  flex-direction: row;
+}
