@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Atlanta from '../../assets/images/atlicon.jpg';
 import Charlotte from '../../assets/images/clticon.jpg';
 import Miami from '../../assets/images/miaicon.jpg';
-
+import '../pages/pages.css';
 
 
 
@@ -23,7 +23,7 @@ export default function Regions() {
         <div className= 'region-container'>
             {categories.map((area, index) => (
                  <Card key={index} className='card'>
-                 <Card.Img variant="top" src={area.image} />
+                 <Card.Img variant="region" src={area.image} />
                  <Card.Body>
                      <Card.Title>{area.title}</Card.Title>
                      
