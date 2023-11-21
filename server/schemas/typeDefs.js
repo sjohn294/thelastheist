@@ -9,8 +9,7 @@ const typeDefs = `
     drivers_ins: String
     address: String
     vehicles:[Vehicle]
-  
-  }
+    }
 
 
 
