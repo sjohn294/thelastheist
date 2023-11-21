@@ -28,12 +28,12 @@ export default function VicTypes() {
     return (
         <div className= 'type-container'>
             {categories.map((type, index) => (
-                <Card key={index} className=' card-victypes'>
+                <Card key={index} className=' card-victypes' as={Link} to={`/VehicleList/${type.title.toLowerCase()}`}>
                 <Card.Img variant="top" className="image card-image" src={type.image} />
-                <Card.Body>
-                    <Card.Title>{type.title}</Card.Title>
-                    <Button as={Link} to={`/VehicleList/${type.title.toLowerCase()}`} variant="primary">See all</Button>
-                </Card.Body>
+               
+                    <Card.Title className='card-title'>{type.title}</Card.Title>
+                    <Button as={Link} to={`/VehicleList/${type.title.toLowerCase()}`} variant="primary"></Button>
+               
             </Card>
             ))}
         </div>

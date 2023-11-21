@@ -38,7 +38,8 @@
 a {
   font-weight: 500;
   color: #aa967f;
-  text-decoration: inherit;
+  text-decoration: none;
+
 }
 a:hover {
   color: #af7547;
