@@ -17,6 +17,7 @@
     "concurrently": "^8.2.0"
   },
   "dependencies": {
-    "react-calendar": "^4.6.1"
+    "react-calendar": "^4.6.1",
+    "stripe": "^8.67.0"
   }
 }
