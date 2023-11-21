@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { useParams } from 'react-router-dom';
 
-const RegionList = ({ region }) => {
+
+const RegionList = () => {
+  const { region } = useParams();
+
+
   const [rentals, setRentals] = useState([]);
 
   useEffect(() => {
-    // Fetch data based on the region
-    // This is a placeholder for your data fetching logic
-    fetch(`your-api-endpoint/rentals/${region}`)
+    fetch(`RegionList/${region}`)
       .then(response => response.json())
       .then(data => setRentals(data))
       .catch(error => console.error('Error fetching data:', error));

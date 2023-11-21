@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import SedanImage from '../../assets/car_images/1.png';
