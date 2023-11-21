@@ -14,7 +14,7 @@ const Schedule = () => {
     const [vehicleDetails, setVehicleDetails] = useState('');
     const [vehicleCost, setVehicleCost] = useState('');
 
-}
+// }
 
 const history = useHistory();
 
@@ -64,7 +64,7 @@ return (
             </label>
             <br />
             <label>
-                Driver's License Number:
+               Driver`&apos`s License Number:
                 <input type="text" value={licenseNumber} onChange={(e) => setLicenseNumber(e.target.value)} />
             </label>
             <br />
@@ -96,7 +96,7 @@ return (
             <button type="submit">Submit</button>
         </form>
     </div>
-);
+)};
 
 
 export default Schedule;
