@@ -8,7 +8,7 @@ import WagonImage from '../../assets/car_images/48.jpg';
 import MinivanImage from '../../assets/car_images/62.jpeg';
 import CoupeImage from '../../assets/car_images/33.jpg';
 import VanImage from '../../assets/car_images/70.jpg';
-import PagesCSS from '../pages/pages.css';
+import '../pages/pages.css';
 
 
 
@@ -27,8 +27,8 @@ export default function VicTypes() {
     return (
         <div className= 'type-container'>
             {categories.map((type, index) => (
-                <Card key={index} className='card' style={{ height: '200px', width: '200px' }}>
-                <Card.Img variant="top" className={`${PagesCSS.image} card-image`} src={type.image} style={{ height: '100px', width: '100px' }} />
+                <Card key={index} className=' card-victypes'>
+                <Card.Img variant="top" className="image card-image" src={type.image} />
                 <Card.Body>
                     <Card.Title>{type.title}</Card.Title>
                     <Button variant="primary" href={type.dataLink}>See all</Button>
