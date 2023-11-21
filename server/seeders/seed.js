@@ -11,7 +11,7 @@ db.once('open', async () => {
     
   await carDB('Vehicle', 'cars');
 
-  await carDB('Users', 'users');
+  await carDB('User', 'users');
 
   await carDB('Regions', 'regions');
 

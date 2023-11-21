@@ -28,6 +28,6 @@ const regionSchema = new Schema({
  
 });
 
-const Region = model('Region', regionSchema);
+const Regions = model('Regions', regionSchema);
 
-module.exports = Region;
+module.exports = Regions;
