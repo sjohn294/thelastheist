@@ -1,6 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import Atlanta from '../../assets/images/atlicon.jpg';
+import Charlotte from '../../assets/images/clticon.jpg';
+import Miami from '../../assets/images/miaicon.jpg';
 
 
 
@@ -11,9 +13,9 @@ import Card from 'react-bootstrap/Card';
 
 export default function Regions() {
     const categories =[
-        {title: '', image:'', dataLink:''},
-        {title: '', image:'', dataLink:''},
-        {title: '', image:'', dataLink:''},
+        {title: 'ATL', image: Atlanta , dataLink:''},
+        {title: 'CLT', image: Charlotte, dataLink:''},
+        {title: 'MIA', image: Miami, dataLink:''},
        
     ]
 
