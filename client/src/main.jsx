@@ -7,7 +7,8 @@ import App from './App.jsx';
 import Home from './components/pages/Home.jsx';
 import Login from './components/pages/Login.jsx';
 import Signup from './components/pages/Signup.jsx';
-import VehicleList from './components/VicList/index.jsx'
+import VehicleList from './components/VicList/index.jsx';
+import RegionList from './components/RegionList/index.jsx';
 
 
 
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '/VehicleList/:category',
         element: <VehicleList />,
+      },
+      {
+        path:'/RegionList/:region',
+        element: <RegionList />,
       },
 
     ],
