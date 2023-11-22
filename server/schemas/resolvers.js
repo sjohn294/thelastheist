@@ -92,31 +92,31 @@ const resolvers = {
 
   // Mutation: {
 
-    // // Create a new user
-    // addUser: async (parent,  { name, email, password }) => {
-    //   const user = await User.create({ name, email, password });
-    //   const token = signToken(user);
-    //   return { token, user };
+  //   // Create a new user
+  //   addUser: async (parent,  { name, email, password }) => {
+  //     const user = await User.create({ name, email, password });
+  //     const token = signToken(user);
+  //     return { token, user };
       
-    // },
+  //   },
 
-    // // Authenticate a user
-    // login: async (parent, { email, password }) => {
-    //   const user = await User.findOne({ email });
+  //   // Authenticate a user
+  //   login: async (parent, { email, password }) => {
+  //     const user = await User.findOne({ email });
 
-    //   if (!user) {
-    //     throw new AuthenticationError('No user found with this email address');
-    //   }
+  //     if (!user) {
+  //       throw new AuthenticationError('No user found with this email address');
+  //     }
 
-    //   const correctPw = await user.isCorrectPassword(password);
+  //     const correctPw = await user.isCorrectPassword(password);
 
-    //   if (!correctPw) {
-    //     throw new AuthenticationError('Incorrect password');
-    //   }
+  //     if (!correctPw) {
+  //       throw new AuthenticationError('Incorrect password');
+  //     }
 
-    //   const token = signToken(user);
-    //   return { token, user };
-    // },
+  //     const token = signToken(user);
+  //     return { token, user };
+  //   },
 
     // // Add a new vehicle
     // addVehicle: async (parent, { vehicleData }, context) => {
@@ -160,8 +160,8 @@ const resolvers = {
     //   throw new AuthenticationError('You need to be logged in!');
     // },
 
-  },
-  // }
+  // },
+  }
 };
 
 module.exports = resolvers;
