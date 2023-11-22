@@ -40,12 +40,13 @@ query SingleVehicle {
     range
     passenger_capacity
     transmission
+    image
   }
 }
 `;
 
 
-export const QUERY_ME = gql`
+export const QUERY_All = gql`
   query me {
     me {
       _id

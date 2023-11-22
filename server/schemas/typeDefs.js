@@ -25,6 +25,7 @@ const typeDefs = `
     range: Int
     passenger_capacity: Int
     transmission: String
+    image: String
     users:[User]
     region:[Region]
     price: Float
@@ -60,23 +61,13 @@ const typeDefs = `
 
     allRegions: [Region]
   
-    checkout(products: [ProductInput]): Checkout
+    
 
 
   }
 
-  type Checkout {
-    session: ID
-  }
+  
 
-  input ProductInput {
-    _id: ID
-    purchaseQuantity: Int
-    name: String
-    image: String
-    price: Float
-    quantity: Int
-  }
 
 
 
@@ -91,7 +82,7 @@ const typeDefs = `
 
     deleteVehicle( id: ID, make: String, model: String, size: String, type: String, doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): Boolean
 
-    updateProduct(_id: ID!, quantity: Int!): Product
+   
 
 
   }

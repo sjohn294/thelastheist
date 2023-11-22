@@ -11,7 +11,8 @@
     "range": 450,
     "passenger_capacity": 5,
     "transmission": "Automatic",
-    "location": "1"
+    "location": "1",
+    "image": "../../assets/car_images/1.png"
   },
   {
     "id": 2,
