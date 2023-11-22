@@ -1,15 +1,14 @@
-
 // Query 
 
 // checkout(products: [ProductInput]): Checkout
 
 
 
+
+
 // Mutation 
 
 // updateProduct(_id: ID!, quantity: Int!): Product
-
-
 
 // TypeDef?
 
@@ -27,3 +26,4 @@
 // type Checkout {
 //   session: ID
 // }
+
