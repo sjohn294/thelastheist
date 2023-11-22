@@ -27,7 +27,7 @@ const resolvers = {
     vehicleSearch: async (parent,  arg ) => {
       console.log(arg)
       let Car = await Vehicle.find(arg)
-      console.log(Car)
+      // console.log(Car)
       return Car
       // .populate('users').sort({ name: 1 }).populate('Regions').sort({ location: 1 });
     },
