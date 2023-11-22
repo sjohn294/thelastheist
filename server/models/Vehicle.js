@@ -62,9 +62,9 @@ const vehicleSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User'
   }],
-  Regions: [{
+  regions: [{
     type: Schema.Types.ObjectId,
-    ref: 'Regions'
+    ref: 'regions'
    
   }]
 
