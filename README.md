@@ -54,4 +54,7 @@ Use this project presentation template to address the following:
 
 
 ## Links
-GitHub Repository [https://github.com/sjohn294/thelastheist.git]
+[GitHub Repository](https://github.com/sjohn294/thelastheist.git)
+<br>
+<br>
+[Heroku Site](https://lit-mesa-31170-fc8b7d808df8.herokuapp.com/)
