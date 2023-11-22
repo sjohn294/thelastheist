@@ -1,0 +1,151 @@
+_id,id,make,model,size,type,doors,fuel_type,mpg,range,passenger_capacity,transmission,__v
+6557ae79f8070e6921d1a64a,4,Chevrolet,Tahoe,Fullsize,SUV,4,Gasoline,18,420,8,Automatic,0
+6557ae79f8070e6921d1a651,11,Chevrolet,Equinox,Compact,SUV,4,Gasoline,28,400,5,Automatic,0
+6557ae79f8070e6921d1a65b,21,Chevrolet,Malibu,Midsize,Sedan,4,Gasoline,32,450,5,Automatic,0
+6557ae79f8070e6921d1a665,31,Chevrolet,Cruze,Compact,Sedan,4,Gasoline,34,420,5,Automatic,0
+6557ae79f8070e6921d1a66f,41,Chevrolet,Traverse,Midsize,SUV,4,Gasoline,27,360,7,Automatic,0
+6557ae79f8070e6921d1a679,51,Chevrolet,Sonic,Subcompact,Sedan,4,Gasoline,32,350,5,Automatic,0
+6557ae79f8070e6921d1a683,61,Chevrolet,Colorado,Compact,Truck,2,Gasoline,25,350,3,Automatic,0
+6557ae79f8070e6921d1a68d,71,Chevrolet,Equinox Hybrid,Compact,SUV,4,Hybrid,34,400,5,Automatic,0
+6557ae79f8070e6921d1a697,81,Chevrolet,Trax,Subcompact,SUV,4,Gasoline,29,340,5,Automatic,0
+6557ae79f8070e6921d1a6a1,91,Chevrolet,Malibu,Midsize,Sedan,4,Gasoline,32,400,5,Automatic,0
+6557ae79f8070e6921d1a6ab,101,Chevrolet,Spark,Subcompact,Hatchback,4,Gasoline,30,300,4,Automatic,0
+6557ae79f8070e6921d1a6b5,111,Chevrolet,Camaro,Compact,Coupe,2,Gasoline,25,320,4,Automatic,0
+6557ae79f8070e6921d1a6bf,121,Chevrolet,Impala,Fullsize,Sedan,4,Gasoline,28,400,5,Automatic,0
+6557ae79f8070e6921d1a6c9,131,Chevrolet,Traverse,Midsize,SUV,4,Gasoline,21,400,8,Automatic,0
+6557ae79f8070e6921d1a6d3,141,Chevrolet,Blazer,Midsize,SUV,4,Gasoline,23,380,5,Automatic,0
+6557ae79f8070e6921d1a671,43,Ford,Bronco,Compact,SUV,2,Gasoline,20,320,4,Automatic,0
+6557ae79f8070e6921d1a6cb,133,Ford,Bronco,Compact,SUV,4,Gasoline,20,320,5,Automatic,0
+6557ae79f8070e6921d1a696,80,Ford,EcoSport,Subcompact,SUV,4,Gasoline,28,350,5,Automatic,0
+6557ae79f8070e6921d1a6d5,143,Ford,EcoSport,Subcompact,SUV,4,Gasoline,28,330,5,Automatic,0
+6557ae79f8070e6921d1a65a,20,Ford,Edge,Midsize,SUV,4,Gasoline,29,400,5,Automatic,0
+6557ae79f8070e6921d1a6be,120,Ford,Edge,Midsize,SUV,4,Gasoline,26,360,5,Automatic,0
+6557ae79f8070e6921d1a685,63,Ford,Edge Hybrid,Midsize,SUV,4,Hybrid,38,450,5,Automatic,0
+6557ae79f8070e6921d1a649,3,Ford,Escape,Compact,SUV,4,Gasoline,30,380,5,Automatic,0
+6557ae79f8070e6921d1a682,60,Ford,Escape Hybrid,Compact,SUV,4,Hybrid,41,480,5,Automatic,0
+6557ae79f8070e6921d1a6c1,123,Ford,Escape Hybrid,Compact,SUV,4,Hybrid,44,480,5,Automatic,0
+6557ae79f8070e6921d1a67b,53,Ford,Expedition,Fullsize,SUV,4,Gasoline,21,360,8,Automatic,0
+6557ae79f8070e6921d1a6b7,113,Ford,Expedition Hybrid,Fullsize,SUV,4,Hybrid,24,380,8,Automatic,0
+6557ae79f8070e6921d1a653,13,Ford,Explorer,Midsize,SUV,4,Gasoline,25,360,7,Automatic,0
+6557ae79f8070e6921d1a6c8,130,Ford,Explorer,Midsize,SUV,4,Gasoline,27,400,7,Automatic,0
+6557ae79f8070e6921d1a650,10,Ford,F-150,Fullsize,Truck,2,Gasoline,22,380,3,Automatic,0
+6557ae79f8070e6921d1a699,83,Ford,F-150,Fullsize,Truck,4,Gasoline,20,380,5,Automatic,0
+6557ae79f8070e6921d1a68f,73,Ford,Flex,Midsize,SUV,4,Gasoline,23,360,7,Automatic,0
+6557ae79f8070e6921d1a65d,23,Ford,Fusion,Midsize,Sedan,4,Gasoline,27,380,5,Automatic,0
+6557ae79f8070e6921d1a6aa,100,Ford,Fusion,Midsize,Sedan,4,Gasoline,34,420,5,Automatic,0
+6557ae79f8070e6921d1a678,50,Ford,Fusion Hybrid,Midsize,Sedan,4,Hybrid,43,550,5,Automatic,0
+6557ae79f8070e6921d1a6a0,90,Ford,Mach-E,Midsize,SUV,4,Electric,99,300,5,Automatic,0
+6557ae79f8070e6921d1a66e,40,Ford,Maverick,Compact,Truck,2,Hybrid,40,500,5,Automatic,0
+6557ae79f8070e6921d1a6dc,150,Ford,Maverick,Compact,Truck,4,Gasoline,33,420,5,Automatic,0
+6557ae79f8070e6921d1a667,33,Ford,Mustang,Compact,Coupe,2,Gasoline,25,350,4,Automatic,0
+6557ae79f8070e6921d1a6ad,103,Ford,Mustang,Compact,Coupe,2,Gasoline,25,320,4,Automatic,0
+6557ae79f8070e6921d1a664,30,Ford,Ranger,Compact,Truck,2,Gasoline,24,350,3,Automatic,0
+6557ae79f8070e6921d1a6a3,93,Ford,Ranger,Compact,Truck,4,Gasoline,23,350,5,Automatic,0
+6557ae79f8070e6921d1a6b4,110,Ford,Raptor,Midsize,Truck,4,Gasoline,15,320,5,Automatic,0
+6557ae79f8070e6921d1a68c,70,Ford,Transit,Fullsize,Van,4,Gasoline,18,350,12,Automatic,0
+6557ae79f8070e6921d1a6d2,140,Ford,Transit Connect,Compact,Van,4,Gasoline,24,320,7,Automatic,0
+6557ae79f8070e6921d1a666,32,Honda,Accord,Midsize,Sedan,4,Gasoline,30,400,5,Automatic,0
+6557ae79f8070e6921d1a648,2,Honda,Civic,Compact,Sedan,4,Gasoline,36,400,5,Automatic,0
+6557ae79f8070e6921d1a68e,72,Honda,Civic Si,Compact,Sedan,4,Gasoline,36,380,5,Manual,0
+6557ae79f8070e6921d1a6d4,142,Honda,Civic Type R,Compact,Hatchback,4,Gasoline,25,320,4,Manual,0
+6557ae79f8070e6921d1a65c,22,Honda,CR-V,Compact,SUV,4,Gasoline,28,400,5,Automatic,0
+6557ae79f8070e6921d1a670,42,Honda,Fit,Subcompact,Hatchback,4,Gasoline,36,350,5,Automatic,0
+6557ae79f8070e6921d1a6b6,112,Honda,Fit,Subcompact,Hatchback,4,Gasoline,36,350,5,Automatic,0
+6557ae79f8070e6921d1a6ac,102,Honda,HR-V,Subcompact,SUV,4,Gasoline,28,340,5,Automatic,0
+6557ae79f8070e6921d1a698,82,Honda,Insight,Compact,Sedan,4,Hybrid,55,600,5,Automatic,0
+6557ae79f8070e6921d1a684,62,Honda,Odyssey,Fullsize,Minivan,4,Gasoline,28,400,8,Automatic,0
+6557ae79f8070e6921d1a6ca,132,Honda,Passport,Midsize,SUV,4,Gasoline,22,380,5,Automatic,0
+6557ae79f8070e6921d1a652,12,Honda,Pilot,Midsize,SUV,4,Gasoline,27,380,8,Automatic,0
+6557ae79f8070e6921d1a6a2,92,Honda,Pilot,Midsize,SUV,4,Gasoline,27,380,8,Automatic,0
+6557ae79f8070e6921d1a67a,52,Honda,Ridgeline,Midsize,Truck,4,Gasoline,22,380,5,Automatic,0
+6557ae79f8070e6921d1a6c0,122,Honda,Ridgeline,Midsize,Truck,4,Gasoline,21,380,5,Automatic,0
+6557ae79f8070e6921d1a657,17,Hyundai,Accent,Subcompact,Sedan,4,Gasoline,36,350,5,Automatic,0
+6557ae79f8070e6921d1a64d,7,Hyundai,Elantra,Compact,Sedan,4,Gasoline,33,380,5,Automatic,0
+6557ae79f8070e6921d1a69d,87,Hyundai,Elantra,Compact,Sedan,4,Gasoline,35,400,5,Automatic,0
+6557ae79f8070e6921d1a6a7,97,Hyundai,Ioniq,Compact,Hatchback,4,Hybrid,59,650,5,Automatic,0
+6557ae79f8070e6921d1a66b,37,Hyundai,Kona,Subcompact,SUV,4,Gasoline,30,350,5,Automatic,0
+6557ae79f8070e6921d1a6b1,107,Hyundai,Kona,Subcompact,SUV,4,Gasoline,30,320,5,Automatic,0
+6557ae79f8070e6921d1a6bb,117,Hyundai,Nexo,Midsize,SUV,4,Hydrogen Fuel Cell,65,380,5,Automatic,0
+6557ae79f8070e6921d1a693,77,Hyundai,Palisade,Midsize,SUV,4,Gasoline,26,360,8,Automatic,0
+6557ae79f8070e6921d1a6d9,147,Hyundai,Palisade,Midsize,SUV,4,Gasoline,26,380,8,Automatic,0
+6557ae79f8070e6921d1a6cf,137,Hyundai,Santa Cruz,Compact,Truck,4,Gasoline,23,360,5,Automatic,0
+6557ae79f8070e6921d1a689,67,Hyundai,Santa Fe,Midsize,SUV,4,Gasoline,26,380,5,Automatic,0
+6557ae79f8070e6921d1a661,27,Hyundai,Sonata,Midsize,Sedan,4,Gasoline,33,380,5,Automatic,0
+6557ae79f8070e6921d1a675,47,Hyundai,Tucson,Compact,SUV,4,Gasoline,26,350,5,Automatic,0
+6557ae79f8070e6921d1a67f,57,Hyundai,Venue,Subcompact,SUV,4,Gasoline,32,340,5,Automatic,0
+6557ae79f8070e6921d1a6c5,127,Hyundai,Venue,Subcompact,SUV,4,Gasoline,32,340,5,Automatic,0
+6557ae79f8070e6921d1a656,16,Jeep,Cherokee,Compact,SUV,4,Gasoline,27,350,5,Automatic,0
+6557ae79f8070e6921d1a69a,84,Jeep,Cherokee,Midsize,SUV,4,Gasoline,27,380,5,Automatic,0
+6557ae79f8070e6921d1a672,44,Jeep,Compass,Compact,SUV,4,Gasoline,31,360,5,Automatic,0
+6557ae79f8070e6921d1a6b8,114,Jeep,Compass,Compact,SUV,4,Gasoline,28,340,5,Automatic,0
+6557ae79f8070e6921d1a686,64,Jeep,Gladiator,Midsize,Truck,4,Gasoline,19,350,5,Automatic,0
+6557ae79f8070e6921d1a6d6,144,Jeep,Gladiator,Midsize,Truck,4,Gasoline,22,350,5,Automatic,0
+6557ae79f8070e6921d1a668,34,Jeep,Grand Cherokee,Midsize,SUV,4,Gasoline,26,380,5,Automatic,0
+6557ae79f8070e6921d1a6ae,104,Jeep,Grand Cherokee,Midsize,SUV,4,Gasoline,26,380,5,Automatic,0
+6557ae79f8070e6921d1a690,74,Jeep,Patriot,Compact,SUV,4,Gasoline,26,340,5,Automatic,0
+6557ae79f8070e6921d1a65e,24,Jeep,Renegade,Subcompact,SUV,4,Gasoline,26,350,5,Automatic,0
+6557ae79f8070e6921d1a6a4,94,Jeep,Renegade,Subcompact,SUV,4,Gasoline,30,340,5,Automatic,0
+6557ae79f8070e6921d1a67c,54,Jeep,Wagoneer,Fullsize,SUV,4,Gasoline,20,350,8,Automatic,0
+6557ae79f8070e6921d1a6cc,134,Jeep,Wagoneer,Fullsize,SUV,4,Gasoline,19,350,8,Automatic,0
+6557ae79f8070e6921d1a64c,6,Jeep,Wrangler,Compact,SUV,4,Gasoline,20,320,4,Manual,0
+6557ae79f8070e6921d1a6c2,124,Jeep,Wrangler,Compact,SUV,4,Gasoline,22,320,5,Automatic,0
+6557ae79f8070e6921d1a69c,86,Nissan,370Z,Compact,Coupe,2,Gasoline,23,320,2,Manual,0
+6557ae79f8070e6921d1a64b,5,Nissan,Altima,Midsize,Sedan,4,Gasoline,28,400,5,Automatic,0
+6557ae79f8070e6921d1a688,66,Nissan,Armada,Fullsize,SUV,4,Gasoline,18,400,8,Automatic,0
+6557ae79f8070e6921d1a6d8,146,Nissan,Armada,Fullsize,SUV,4,Gasoline,16,400,8,Automatic,0
+6557ae79f8070e6921d1a6a6,96,Nissan,Frontier,Compact,Truck,4,Gasoline,20,340,5,Automatic,0
+6557ae79f8070e6921d1a6b0,106,Nissan,Kicks,Subcompact,SUV,4,Gasoline,33,340,5,Automatic,0
+6557ae79f8070e6921d1a660,26,Nissan,Maxima,Fullsize,Sedan,4,Gasoline,30,400,5,Automatic,0
+6557ae79f8070e6921d1a66a,36,Nissan,Murano,Midsize,SUV,4,Gasoline,28,380,5,Automatic,0
+6557ae79f8070e6921d1a6c4,126,Nissan,Murano,Midsize,SUV,4,Gasoline,28,400,5,Automatic,0
+6557ae79f8070e6921d1a692,76,Nissan,Pathfinder,Midsize,SUV,4,Gasoline,23,380,7,Automatic,0
+6557ae79f8070e6921d1a674,46,Nissan,Rogue,Compact,SUV,4,Gasoline,29,380,5,Automatic,0
+6557ae79f8070e6921d1a6ba,116,Nissan,Rogue,Compact,SUV,4,Gasoline,29,360,5,Automatic,0
+6557ae79f8070e6921d1a655,15,Nissan,Sentra,Compact,Sedan,4,Gasoline,33,400,5,Automatic,0
+6557ae79f8070e6921d1a67e,56,Nissan,Titan,Fullsize,Truck,4,Gasoline,18,380,5,Automatic,0
+6557ae79f8070e6921d1a6ce,136,Nissan,Titan,Fullsize,Truck,4,Gasoline,16,380,5,Automatic,0
+6557ae79f8070e6921d1a66c,38,Subaru,Ascent,Midsize,SUV,4,Gasoline,23,350,8,Automatic,0
+6557ae79f8070e6921d1a6b2,108,Subaru,Ascent,Midsize,SUV,4,Gasoline,23,360,8,Automatic,0
+6557ae79f8070e6921d1a68a,68,Subaru,BRZ,Compact,Coupe,2,Gasoline,30,350,4,Manual,0
+6557ae79f8070e6921d1a6d0,138,Subaru,BRZ,Compact,Coupe,2,Gasoline,30,320,4,Manual,0
+6557ae79f8070e6921d1a658,18,Subaru,Crosstrek,Subcompact,SUV,4,Hybrid,35,380,5,Automatic,0
+6557ae79f8070e6921d1a69e,88,Subaru,Crosstrek Hybrid,Subcompact,SUV,4,Hybrid,90,480,5,Automatic,0
+6557ae79f8070e6921d1a64e,8,Subaru,Forester,Compact,SUV,4,Gasoline,29,350,5,Automatic,0
+6557ae79f8070e6921d1a694,78,Subaru,Forester,Compact,SUV,4,Gasoline,28,400,5,Automatic,0
+6557ae79f8070e6921d1a6da,148,Subaru,Forester,Midsize,SUV,4,Gasoline,33,420,5,Automatic,0
+6557ae79f8070e6921d1a680,58,Subaru,Impreza,Compact,Sedan,4,Gasoline,31,380,5,Automatic,0
+6557ae79f8070e6921d1a6c6,128,Subaru,Impreza,Compact,Sedan,4,Gasoline,36,380,5,Automatic,0
+6557ae79f8070e6921d1a662,28,Subaru,Legacy,Midsize,Sedan,4,Gasoline,31,360,5,Automatic,0
+6557ae79f8070e6921d1a6a8,98,Subaru,Legacy,Midsize,Sedan,4,Gasoline,35,420,5,Automatic,0
+6557ae79f8070e6921d1a676,48,Subaru,Outback,Midsize,Wagon,4,Gasoline,33,400,5,Automatic,0
+6557ae79f8070e6921d1a6bc,118,Subaru,Outback,Midsize,Wagon,4,Gasoline,33,400,5,Automatic,0
+6557ae79f8070e6921d1a65f,25,Toyota,4Runner,Midsize,SUV,4,Gasoline,17,380,5,Automatic,0
+6557ae79f8070e6921d1a6a9,99,Toyota,4Runner,Midsize,SUV,4,Gasoline,17,380,5,Automatic,0
+6557ae79f8070e6921d1a673,45,Toyota,Avalon,Fullsize,Sedan,4,Gasoline,32,400,5,Automatic,0
+6557ae79f8070e6921d1a6b9,115,Toyota,Avalon,Fullsize,Sedan,4,Gasoline,32,400,5,Automatic,0
+6557ae79f8070e6921d1a647,1,Toyota,Camry,Midsize,Sedan,4,Gasoline,32,450,5,Automatic,0
+6557ae79f8070e6921d1a695,79,Toyota,Camry Hybrid,Midsize,Sedan,4,Hybrid,51,550,5,Automatic,0
+6557ae79f8070e6921d1a67d,55,Toyota,CHR,Compact,SUV,4,Gasoline,31,360,5,Automatic,0
+6557ae79f8070e6921d1a6d7,145,Toyota,CHR,Subcompact,SUV,4,Gasoline,31,320,5,Automatic,0
+6557ae79f8070e6921d1a6c3,125,Toyota,C-HR,Subcompact,SUV,4,Gasoline,31,320,5,Automatic,0
+6557ae79f8070e6921d1a669,35,Toyota,Corolla,Compact,Sedan,4,Gasoline,33,400,5,Automatic,0
+6557ae79f8070e6921d1a654,14,Toyota,Highlander,Midsize,SUV,4,Hybrid,36,450,7,Automatic,0
+6557ae79f8070e6921d1a69b,85,Toyota,Highlander Hybrid,Midsize,SUV,4,Hybrid,35,500,7,Automatic,0
+6557ae79f8070e6921d1a681,59,Toyota,Land Cruiser,Fullsize,SUV,4,Gasoline,13,350,8,Automatic,0
+6557ae79f8070e6921d1a6c7,129,Toyota,Land Cruiser,Fullsize,SUV,4,Gasoline,13,350,8,Automatic,0
+6557ae79f8070e6921d1a663,29,Toyota,Prius,Compact,Hatchback,4,Hybrid,54,600,5,Automatic,0
+6557ae79f8070e6921d1a6a5,95,Toyota,Prius,Compact,Hatchback,4,Hybrid,58,600,5,Automatic,0
+6557ae79f8070e6921d1a6b3,109,Toyota,Prius Prime,Compact,Hatchback,4,Plug-in Hybrid,133,640,5,Automatic,0
+6557ae79f8070e6921d1a64f,9,Toyota,Rav4,Compact,SUV,4,Hybrid,40,480,5,Automatic,0
+6557ae79f8070e6921d1a691,75,Toyota,Rav4 Prime,Compact,SUV,4,Plug-in Hybrid,94,600,5,Automatic,0
+6557ae79f8070e6921d1a6db,149,Toyota,Rav4 Prime,Compact,SUV,4,Plug-in Hybrid,94,580,5,Automatic,0
+6557ae79f8070e6921d1a68b,69,Toyota,Sequoia,Fullsize,SUV,4,Gasoline,15,380,8,Automatic,0
+6557ae79f8070e6921d1a6d1,139,Toyota,Sequoia,Fullsize,SUV,4,Gasoline,17,360,8,Automatic,0
+6557ae79f8070e6921d1a687,65,Toyota,Sienna,Fullsize,Minivan,4,Hybrid,36,450,7,Automatic,0
+6557ae79f8070e6921d1a6cd,135,Toyota,Sienna,Midsize,Van,4,Hybrid,36,480,7,Automatic,0
+6557ae79f8070e6921d1a659,19,Toyota,Tacoma,Midsize,Truck,2,Gasoline,21,350,3,Automatic,0
+6557ae79f8070e6921d1a69f,89,Toyota,Tacoma,Compact,Truck,4,Gasoline,20,350,5,Automatic,0
+6557ae79f8070e6921d1a677,49,Toyota,Tundra,Fullsize,Truck,4,Gasoline,17,380,5,Automatic,0
+6557ae79f8070e6921d1a6bd,119,Toyota,Tundra,Fullsize,Truck,4,Gasoline,17,380,5,Automatic,0
+6557ae79f8070e6921d1a66d,39,Toyota,Yaris,Subcompact,Sedan,4,Gasoline,35,360,5,Automatic,0
+6557ae79f8070e6921d1a6af,105,Toyota,Yaris,Subcompact,Sedan,4,Gasoline,35,330,5,Automatic,0
