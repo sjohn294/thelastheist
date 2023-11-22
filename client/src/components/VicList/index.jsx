@@ -12,28 +12,30 @@ const VicList = () => {
   const { loading, error, data } = useQuery(QUERY_BY_TYPE, {
     variables: { type: category },
   });
-
- 
+  const vicList = data?.vehicleSearch || [];
+console.log(category)
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div className="list-container">
-      
-      {data && data.vehiclesByType.length ? (
-        data.vehiclesByType.map((item, index) => (
-          <Card key={index} className='item-card'>
-            <Card.Img variant="top" src={data.vehiclesByType.image} />
+
+      {loading ? (
+        <p>No vehicles found for this category.</p>
+      ) : (
+        vicList.map((item) => (
+          <Card  className='item-card'>
+            <Card.Img variant="top" src={item.image} />
             <Card.Body>
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text>{item.description}</Card.Text>
+              <Card.Title>{item.make}</Card.Title>
+              <Card.Text>{item.model}</Card.Text>
               <Button variant="primary" href={item.moreInfoLink}>Learn More</Button>
             </Card.Body>
           </Card>
         ))
-      ) : (
-        <p>No vehicles found for this category.</p>
+
+
       )}
     </div>
   );

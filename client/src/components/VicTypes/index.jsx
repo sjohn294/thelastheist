@@ -16,20 +16,20 @@ import '../pages/pages.css';
 
 export default function VicTypes() {
     const categories =[
-        {title: 'Sedans', image:SedanImage, dataLink:''},
-        {title: 'SUVs', image:SuvImage, dataLink:''},
-        {title: 'Trucks', image:TruckImage, dataLink:''},
-        {title: 'Hatchbacks', image:HatchbackImage, dataLink:''},
-        {title: 'Wagons', image:WagonImage, dataLink:''},
-        {title: 'Minivans', image:MinivanImage, dataLink:''},
-        {title: 'Coupes', image:CoupeImage, dataLink:''},
-        {title: 'Vans', image:VanImage, dataLink:''},
+        {title: 'Sedan', image:SedanImage, dataLink:''},
+        {title: 'SUV', image:SuvImage, dataLink:''},
+        {title: 'Truck', image:TruckImage, dataLink:''},
+        {title: 'Hatchback', image:HatchbackImage, dataLink:''},
+        {title: 'Wagon', image:WagonImage, dataLink:''},
+        {title: 'Minivan', image:MinivanImage, dataLink:''},
+        {title: 'Coupe', image:CoupeImage, dataLink:''},
+        {title: 'Van', image:VanImage, dataLink:''},
     ]
 
     return (
         <div className= 'type-container'>
             {categories.map((type, index) => (
-                <Card key={index} className=' card-victypes' as={Link} to={`/VehicleList/${type.title.toLowerCase()}`}>
+                <Card key={index} className=' card-victypes' as={Link} to={`/VehicleList/${type.title}`}>
                 <Card.Img variant="top" className="image card-image" src={type.image} />
 
                 <Card.Body>

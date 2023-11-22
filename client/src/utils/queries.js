@@ -63,7 +63,6 @@ export const QUERY_All = gql`
 `;
 
 export const QUERY_BY_TYPE = gql`
-query QueryByType($type: String!) {
   query VehicleSearch($type: String) {
     vehicleSearch(type: $type) {
       id
