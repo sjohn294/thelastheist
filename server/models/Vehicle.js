@@ -58,6 +58,9 @@ const vehicleSchema = new Schema({
     required: true,
     trim: true
   },
+  image: {
+    type: String,
+  },
   users: [{
     type: Schema.Types.ObjectId,
     ref: 'User'
@@ -74,3 +77,4 @@ const vehicleSchema = new Schema({
 const Vehicle = model('Vehicle', vehicleSchema);
 
 module.exports = Vehicle;
+
