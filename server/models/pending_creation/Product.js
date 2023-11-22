@@ -4,6 +4,7 @@
 // checkout(products: [ProductInput]): Checkout
 
 
+
 // Mutation 
 
 // updateProduct(_id: ID!, quantity: Int!): Product
@@ -20,6 +21,8 @@
 //   price: Float
 //   quantity: Int
 // }
+
+
 
 // type Checkout {
 //   session: ID
