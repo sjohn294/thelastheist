@@ -18,7 +18,9 @@ db.once('open', async () => {
     }
     await Vehicle.create(car1)
     const blah = await Vehicle.findById("655d2650c3d1c2e855875d34").populate({
+
       path: "Regions",
+
       model: "Regions"
     })
     console.log(blah)
