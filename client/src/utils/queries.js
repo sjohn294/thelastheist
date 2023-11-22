@@ -64,12 +64,20 @@ export const QUERY_All = gql`
 
 export const QUERY_BY_TYPE = gql`
 query QueryByType($type: String!) {
-  vehiclesByType(type: $type) {
-    id
-    title
-    description
-    image
-    moreInfoLink
+  query VehicleSearch($type: String) {
+    vehicleSearch(type: $type) {
+      id
+      make
+      model
+      size
+      type
+      doors
+      fuel_type
+      mpg
+      range
+      passenger_capacity
+      transmission
+   
     
   }
 }
