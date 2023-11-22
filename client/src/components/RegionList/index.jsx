@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { useQuery } from '@apollo/client';
+import { QUERY_VEHICLES_BY_REGION } from '../../utils/queries.js';
 import Button from 'react-bootstrap/Button';
 import { useParams } from 'react-router-dom';
 
 
 const RegionList = () => {
   const { region } = useParams();
+  const { loading, error, data } = useQuery(QUERY_VEHICLES_BY_REGION, {
+    variables: { type: region },
+  });
 
-
-  const [rentals, setRentals] = useState([]);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   useEffect(() => {
     fetch(`RegionList/${region}`)
@@ -33,7 +38,7 @@ const RegionList = () => {
           </Card>
         ))
       ) : (
-        <p>Loading rentals...</p>
+        <p>No Rentals in this region.</p>
       )}
     </div>
   );
