@@ -25,10 +25,7 @@ const typeDefs = `
     range: Int
     passenger_capacity: Int
     transmission: String
-    image: String
-    users:[User]
-    region:[Region]
-    price: Float
+      
   }
 
 
@@ -39,7 +36,6 @@ const typeDefs = `
   }
 
   type Region {
-      id: ID
       location: String
       users: [User]
       vehicles: [Vehicle]
@@ -55,7 +51,7 @@ const typeDefs = `
 
     allVehicles: [Vehicle]
 
-    singleVehicle( id: ID, make: String, model: String, size: String, type: String,    doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): Vehicle
+    vehicleSearch( id: ID, make: String, model: String, size: String, type: String, doors: Int, fuel_type: String, mpg: Int, range: Int, passenger_capacity: Int, transmission: String): [Vehicle]
     
     singleRegion(id:ID, location:String!): Region
 

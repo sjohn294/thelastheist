@@ -19,12 +19,17 @@ const resolvers = {
 
     // Fetch all vehicles
     allVehicles: async () => {
-      return await Vehicle.find().sort({ make: 1 }).sort({ model: 1 }).populate('users').sort({ name: 1 }).populate('Regions').sort({ location: 1 });
+      return await Vehicle.find().sort({ make: 1 }).sort({ model: 1 })
+      // .populate('users').sort({ name: 1 }).populate('Regions').sort({ location: 1 });
     },
 
 
-    singleVehicle: async (parent, { arg }) => {
-      return await Vehicle.find({arg}).populate('users').sort({ name: 1 }).populate('Regions').sort({ location: 1 });
+    vehicleSearch: async (parent,  arg ) => {
+      console.log(arg)
+      let Car = await Vehicle.find(arg)
+      console.log(Car)
+      return Car
+      // .populate('users').sort({ name: 1 }).populate('Regions').sort({ location: 1 });
     },
 
 
